@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <!--base href="http://labs.toolness.com/moz/slides-2/"-->
+  <title></title>
+  <link rel="stylesheet" href="screen.css">
+  <script src="jquery.js"></script>
+  <script src="jquery.marquee.js"></script>
+  <script src="slides-triggers.js"></script>
+  <script src="slides.js"></script>
+
+  <div class="title slide">
+    <div class="content">
+      <div class="header">Mozilla, Firefox4 e l'OpenWeb</div>
+      <div class="subheader">Luca Greco @ SaLUG! <br/> GNU/LinuxDay2010</div>
+      <div class="date">23 Ottobre 2010</div>
+    </div>
+    <div class="footer">LinuxDay2010</div>
+  </div>
+
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Who are you?!?</div>
+      <div class="subheader">...</div>
+      <div class="main">
+        <img class="right" style="height: 30em;" src="img/i_will_not_fix.jpg">
+        <!-- http://www.etsy.com/listing/13307891/no-i-will-not-fix-your-computer-funny-t -->
+        <h2>Non sono un dipendente Mozilla</h2>
+        <h2>Partecipo attivamente alla community Mozilla</h2>
+	<ul>
+	    <li>XULit.org</li>
+	    <li>Mozilla Jetpack</li>
+	</ul>
+        <h2>Sviluppatore/contributor/mantainer di <br>
+              alcune estensioni e applicazioni basate sulle <br>
+              tecnologie Mozilla</h2>
+	<ul>
+	  <li>MozREPL: Developer-oriented Firefox Addon  (Contributor-Mantainer)</li>
+	  <li>Dude, Where is my car?: Geolocation Firefox Mobile Addon <b>"Winner of Mobile Challenge 2010"</b> (Developer)</li>
+	  <li>Barcodize: barcode generation page action for Firefox Mobile  (Developer)</li>
+	</ul>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Intro</div>
+      <div class="subheader">...</div>
+      <div class="main">
+	<center>
+	  <h1>Questa presentazione è realizzata mediante HTML+CSS+Javascript</h1>
+	  <img src="img/minefield_logo.png"/>
+	  <h1>eseguita da Mozilla Minefield (Firefox 4.0 beta8)</h1>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Cos'è Mozilla?</div>
+      <div class="subheader">Mozilla Organizations</div>
+      <div class="main">
+	<div style="margin-left: 40%;">
+	  <div class="left" style="width: 70%; margin-bottom: 20px">
+	    <b>Mozilla Corporation e Mozilla Messaging</b>: Sono le due corporation. interamente controllate dalla Foundation,
+	    a cui vengono destinate rispettivamente le risorse per lo sviluppo di Firefox (e di altri progetti legati al Web)
+	    e Thunderbird (e altri progetti legati alla messagistisca).		 
+	  </div>
+	  <img src="img/Mozilla_Thunderbird_logo.png"/>	
+	</div>	
+	<img class="left" src="img/Mozilla_Foundation_logo.png"/>
+	<div style="width: 70%; margin-bottom: 20px;">
+	  <b>Mozilla Foundation</b>: E' un'organizzazione no-profit la quale supporta la Mozilla Community,
+	  ridistribuisce le risorse alle organizzazioni collegate e cerca nuovi modi con cui
+	  perseguire l'obiettivo di rendere sempre più evidente alle persone di tutto il mondo che Internet è
+	  una risorsa pubblica importante da presenvare.
+	  aziende del settore.
+	</div>
+	<div style="margin-left: 40%">
+	  <img class="left" src="img/Mctlogo.png"/>
+	  <div style="width: 90%; margin-bottom: 20px;">
+	    <b>Mozilla Community</b>: la community supportata dalla Foundation è composta da una miriade di organizzazioni
+	    territoriali (Mozilla Europe, Mozilla Japan, Mozilla Online [China], Mozilla Italia, Mozilla Hispano...) o 
+	    orientate ad specifici ambiti (MozDev, BabelZilla, XULFR, XULIT...).
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Cos'è Mozilla?</div>
+      <div class="subheader">Mozilla Community Map</div>
+      <div class="main">
+	<center>
+	  <a href="http://www.mozilla.org/community/index.html#mozilla">
+	    <img class="center" style="margin-bottom: 100px; border: 1px solid red;" src="img/Mozilla_Community_Map.png"/>
+	  </a>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">Netscape</div>
+      <div class="main">
+	<center>
+	  <img class="center" style="margin-top: -60px;" src="img/ns1a.gif"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">Mozilla</div>
+      <div class="main">
+	<center>
+	  <img class="center" style="margin-top: -60px;" src="img/moz-10.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">Firefox</div>
+      <div class="main">
+	<center>
+	  <img class="center" style="margin-top: -60px;" src="img/fx-10.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">La Guerra dei Browser</div>
+      <div class="main">
+	<center>
+	  <img class="left" style="margin-top: 0px;" src="img/2nd_browser_war.png"/>
+	  <img class="center" style="margin-top: -60px;" src="img/browser-war.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">Dal Web 1.0</div>
+      <div class="main">
+	<center>
+	  <img class="center" style="border: 1px solid grey;" src="img/first_webpage.jpg"/>
+	</center>	
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">passando per il Web 2.0</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/gmail.jpg"/>
+	  <img class="center" src="img/google_docs_logo.png"/>
+	  <h1>Il Web non è più composto di soli contenuti.</h1>
+	  <h1>
+	    Le applicazioni iniziano a spostarsi dal Desktop sul Web
+	  </h1>
+	</center>	
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">fino al Web 3.0</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/facebook-logo.jpg"/>
+	  <img class="center" src="img/flickr-logo.png"/>
+	  <img class="center" src="img/youtube-logo.jpg"/>
+	  <img class="center" src="img/twitter-logo.jpg"/>
+	  <h1>
+	    Gli utenti non sono più solo fruitori dei contenuti,
+	    
+	    ma ne sono i principali produttori…
+	    “noi mettiamo l’applicazione e voi tutto il resto”
+	  </h1>
+	</center>	
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">Per saperne di più</div>
+      <div class="main">
+	<center>
+	  <h1><a href="http://www.mozilla.org/foundation">Mozilla Foundation</a></h1>
+	  <h1><a href="http://www.mozilla.org/about/manifesto.it.html">Mozilla Manifesto</a></h1>
+	  <h1><a href="http://www.mozillaitalia.it/home/">Mozilla Italia</a></h1>
+	  <h1><a href="http://www.andrew-turnbull.net/mozilla/">A Visual Browser History</a></h1>
+	  <h1><a href="http://it.wikipedia.org/wiki/Storia_di_Internet">Wikipedia: Storia di Internet</a></h1>
+	  <h1><a href="http://it.wikipedia.org/wiki/Browser">Wikipedia: Browser</a></h1>
+	  <h1><a href="http://it.wikipedia.org/wiki/Guerra_dei_browser">Wikipedia: Guerra dei browser</a></h1>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Qual'è il ruolo di Mozilla nel Web?</div>
+      <div class="subheader">La Terza Guerra dei Browser</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/3rd_browser_war.jpg"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox...</div>
+      <div class="subheader">... on Mobile</div>
+      <div class="main">
+	<div class="left" style="margin-right: 10%;">
+	  <h2><a href="http://www.mozilla.com/it/mobile/">Firefox for Mobile (Android/Maemo)</a></h2>
+	  <h2><a href="http://www.mozilla.com/it/mobile/home/">Firefox Home (iPhone)</a></h2>
+	  <img src="img/firefox_mobile_logo.jpg" style="border: 1px solid grey;"/>
+	</div>
+	<img class="left" src="img/firefox_mobile.jpg" style="border: 1px solid grey;"/>
+	<img class="center" src="img/firefox_home_iphone.jpg"/>
+      </div>      
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Caratteristiche</div>
+      <div class="main">
+	<center>
+	  <h1><a href="http://www.mozilla.com/en-US/firefox/beta/features/">Mozilla Firefox 4 beta - Feature Page</a></h1>
+	  <h2>Un nuovo look</h2>
+	  <h2>Maggiore velocità</h2>
+	  <h2>Nuova gestione Tab</h2>
+	  <h2>Firefox Sync</h2>
+	  <h2>HTML5, CSS3 e altre funzionalità sperimentali</h2>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Un nuovo look</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/ff4_new_look.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Panorama</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/ff4_panorama.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Firefox Sync</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/Firefox_Sync_logo.png"/>
+	  <h2>Sincronizza i tuoi bookmark e i tuoi tab</h2>
+	  <h2>su Desktop, Laptop e Smartphone</h2>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Mozilla Jetpack</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/mozilla-jetpack.jpg"/>
+	  <h2>Estensioni più semplici da sviluppare</h2>
+	  <h2>e che si installano/disinstallano senza riavviare</h2>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">Are we fast yet?</div>
+      <div class="main">
+	<center>
+	  <h3><a href="http://arewefastyet.com">arewefastyet.com</a></h3>
+	  <img class="center" src="img/arewefastyet.png"/>
+	  <p>Nessun benchmark è in grado di determinare univocamente qual'è il browser più veloce... ad esempio:</p>
+	  <h3><a href="http://ie.microsoft.com/testdrive/Performance/FishIE%20tank/Default.html">FishIE Benchmark</a></h3>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Firefox 4</div>
+      <div class="subheader">HTML5, CSS3 and more</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/html5test.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Web come nuovo Media</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/webtrend_map_2009.png"/>
+	  <a href="http://www.informationarchitects.jp/en/wtm4/">
+	    <h1>WebTrendMap</h1>
+	  </a>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Open vs. Closed</div>
+      <div class="main">
+	<center>
+	  <img class="center" style="width: 40%;" src="img/open.jpg"/>
+	  <img class="center" style="width: 40%;" src="img/closed.jpg"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">L'importanza degli Standard</div>
+      <div class="main">
+	<center>
+	  <div class="left" style="margin-left: 20%; margin-right: 20%">
+	    <a href="http://it.wikipedia.org/wiki/World_Wide_Web_Consortium"><h2>W3C</h2></a>
+	    <a href="http://it.wikipedia.org/wiki/ECMA"><h2>ECMA</h2></a>
+	  </div>
+	  <img class="left" src="img/screw1.jpg"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Plugin come eccezione</div>
+      <div class="main">
+	<center>
+	  <img class="center" src="img/web_vs_plugins.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">HTML5 e CSS3</div>
+      <div class="main">
+	<center>
+	  <div class="left">
+	    <h1>SVG</h1>
+	    <h3><a target="_blank" href="http://raphaeljs.com/graffle.html">Interactive Diagram</a></h3>
+	    <h3><a target="_blank" href="http://raphaeljs.com/chart.html">SVG Animated Chart</a></h3>
+	    <br/>
+	    <h1>Canvas/WebGL</h1>
+	    <h3><a target="_blank" href="http://mugtug.com/sketchpad/">Canvas Paint / Sketchpad</a></h3>
+	    <h3><a target="_blank" href="http://antscape.byethost8.com/bike/">MotorBike Game</a></h3>
+	    <h3><a target="_blank" href="http://www.ambiera.com/copperlicht/demos.html">WebGL Copperlicht 3D Engine</a></h3>
+	  </div>
+	  <img class="left" src="img/whatwg.png" style="margin-left: 15%; margin-right: 15%"/>
+	  <div class="left">
+	    <h1>CSS3</h1>
+	    <h3><a target="_blank" href="http://www.zachstronaut.com/lab/text-shadow-box/text-shadow-box.html">Interactive Text Shadow</a></h3>
+	    <h3><a target="_blank" href="http://www.zachstronaut.com/lab/isocube.html">Isocube</a></h3>
+	    <h3><a target="_blank" href="http://www.cssplay.co.uk/menu/css3-duff-roll.html">Duff Beer Roll</a></h3>
+	    <h3><a target="_blank" href="http://demo.marcofolio.net/slick_jquery_css3_menu/default.html">jQuery+CSS3 slick menù</a></h3>
+	    <h3><a target="_blank" href="http://css-tricks.com/examples/CSS3Clock/">CSS3 Clock</a></h3>
+	    <h3><a target="_blank" href="http://polarnerd.com/examples/aero/aero.htm">CSS3 Dialogs "Windows Aero" style</a></h3>
+	  </div>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Theora vs. H264 e WebM</div>
+      <div class="main">
+	<center>
+	  <h2>Mozilla Foundation ha combattuto una dura battaglia contro l'uso
+	    di H264 come codec video per il tag video, a causa dei brevetti e licenze
+	    che ne impediscono un uso realmente libero...</h2>
+	  <h2>Molto probabilmente grazie al peso di Firefox all'interno dell'attuale
+	    panorama dei browser, Google ha deciso di abbandonare la strada di H264... 
+	    e così arrivò WebM</h2>
+	  <h2><a href="http://www.webmproject.org/">WEBMProject.org</a></h2>
+	  <h1>Video</h1>
+	  <h3><a target="_blank" href="http://www.craftymind.com/factory/html5video/CanvasVideo.html">Video Explosion</a></h3>
+	  <h3><a target="_blank" href="http://www.craftymind.com/factory/html5video/CanvasVideo3D.html">3D Video Rotation</a></h3>
+	  <h3><a target="_blank" href="http://media.chikuyonok.ru/ambilight">Video Ambient Light Effect</a></h3>
+	  <h3><a target="_blank" href="http://people.mozilla.com/~prouget/demos/round/index.xhtml">Video Washing Machine</a></h3>
+	  <h3><a target="_blank" href="http://fczbrhackday.appspot.com/">Video Puzzle</a></h3>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Audio API</div>
+      <div class="main">
+	<center>
+	  <h3><a target="_blank" href="http://moztw.org/demo/audioplayer/">Audio Player Widget</a></h3>
+	  <h3><a target="_blank" href="http://apm.ircam.fr/page/audio-tag/">Custom Audio Player</a></h3>
+	  <h2>Audio Data API (Mozilla Experiment)</h2>
+	  <h3><a target="_blank" href="http://videos.mozilla.org/serv/blizzard/audio-slideshow/">Audio Data API Presentation</a></h3>
+	  <img src="img/mozilla-audio-api.png"/>
+	</center>
+      </div>
+    </div>
+  </div>
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Mozilla... non solo Firefox</div>
+      <div class="main">
+	<center>
+	  <div style="width: 50%; float: left;">
+	    <img src="img/processingjs-logo.png"/>
+	    <img src="img/bespin-logo.jpg"/>
+	    <img src="img/jquery-logo.png"/>
+	    <img src="img/jquery-mobile-logo.png"/>
+	  </div>
+	  <div style="width: 50%">
+	    <h2>Mozilla sponsorizza e sviluppa anche progetti cross-browser</h2>
+	    <h3><a href="http://processingjs.org">ProcessingJS</a></h3>
+	    <h3><a href="http://mozillalabs.com/skywriter/">MozillaLabs Bespin/Skywriter</a></h3>
+	    <h3><a href="http://jquery.com">jQuery</a></h3>
+	    <h3><a href="http://jquerymobile.com">jQuery Mobile</a></h3>
+	    <h3>...</h3>
+	  </div>
+	</center>
+      </div>
+    </div>
+  </div>
+
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">OpenWeb</div>
+      <div class="subheader">Mozilla... non solo Firefox</div>
+      <div class="main">
+	<center>
+	  <div style="width: 50%; float: left;">
+	    <img src="img/drumbeat-logo.png"/>
+	    <br/>
+	    <img src="img/mozilla-gaming-logo.png" style="background: grey;"/>
+	  </div>
+	  <div style="width: 50%">
+	    <h3>...</h3>
+	    <h2>oltre ad eventi, conferenze e concorsi allo scopo di
+	      diffondere e supportare l' OpenWeb</h2>
+	    <h3><a href="http://www.drumbeat.org/about">Mozilla Drumbeat</a></h3>
+	    <h3><a href="https://gaming.mozillalabs.com/">Game On 2010! (MozillaLabs Gaming)</a></h3>  
+	  </div>
+	</center>
+      </div>
+    </div>
+  </div>
+
+  <div class="normal slide">
+    <div class="content">
+      <div class="header">Credits</div>
+      <div class="subheader">...</div>
+      <div class="main">
+	<div style="width: 2%; height: 100%; float: left;">
+	  <br>
+	</div>
+	  <marquee  id="marquee" direction="up" scrollamount="3" width="1000" height="420">
+	    <center>
+	      <h1>Released under CreativeCommons 2.5 by-nc-sa</h1>	      
+	      <br/>
+
+	      <h1> Images:</h1>
+	      <h2> All Mozilla logos, images and application screenshots</h2>
+	      <h2> from Mozilla sites </h2>
+	      <br/>
+	      
+	      <h2> Netscape/Mozilla/Firefox 1.0 screenshots</h2>
+	      <h2> from <a href="http://www.andrew-turnbull.net/mozilla/">Andrew Trunbull's Visual Browser Tour</a></h2>
+
+	      <br/>
+
+	      <h2> IE vs Firefox </h2>
+	      <h2> from <a href="http://www.illustratorworld.com/artwork/2238/">Greg Bakes</a></h2>
+
+	      <br/>
+
+	      <h2> Browser War Diagram </h2>
+	      <h2> from <a href="http://www.favbrowser.com/the-browser-wars/">favbrowser.com</a></h2>
+
+	      <br/>
+
+	      <h2> First Web Page </h2>
+	      <h2> from <a href="http://upload.wikimedia.org/wikipedia/it/1/13/Prima_pagina_del_Web.jpg">wikipedia.org</a></h2>
+
+	      <br/>
+
+	      <h2> GMail, Google Docs and Youtube logos</h2>
+	      <h2> from Google images </h2>
+
+	      <br/>
+
+	      <h2> Twitter, Facebook and Flickr logos</h2>
+	      <h2> from their websites </h2>
+
+	      <br/>
+
+	      <h2> The Third Browser War </h2>
+	      <h2> from <a href="http://www.flickr.com/photos/bradybd/2818154005/">bradybd</a></h2>
+
+	      <br/>
+
+	      <h2> WebTrendMap 2009 </h2>
+	      <h2> from <a href="http://informationarchitects.jp/webtrendmap2009/">InformationArchitects.jp</a></h2>
+
+	      <br/>
+
+	      <h2> "Open" photo </h2>
+	      <h2> from <a href="http://www.flickr.com/photos/eelssej_/413385838/">eelssej_</a></h2>
+
+	      <br/>
+
+	      <h2> "Closed" photo </h2>
+	      <h2> from <a href="http://www.flickr.com/photos/ramella/351850629/">ramella</a></h2>
+
+	      <br/>
+
+	      <h2> Screw photo </h2>
+	      <h2> from <a href="http://www.flickr.com/photos/melloveschallah/3413424403/">melloveschallah</a></h2>
+
+	      <br/>
+
+	      <h2> jQuery, jQuery Mobile and ProcessingJS logos</h2>
+	      <h2> from their websites </h2>
+
+	      <br/>
+
+	      <h1>Demos and Examples: </h1>
+
+	      <h2> SVG Examples </h2>
+	      <h2> from <a href="http://raphaeljs.com">raphaeljs.com</a></h2>
+
+	      <br/>
+
+	      <h2> Canvas Paint </h2>
+	      <h2> from <a href="http://mugtug.com/">mugtug.com</a></h2>
+
+	      <br/>
+
+	      <h2> MotorBike Game </h2>
+	      <h2> from <a href="http://antscape.byehost8.com/">antscape</a></h2>
+
+	      <br/>
+
+	      <h2> WebGL Copperlicht 3D Engine </h2>
+	      <h2> from <a href="http://www.ambierra.com">ambierra.com</a></h2>
+
+	      <br/>
+
+	      <h2> Interactive Text Shadow and Isocube </h2>
+	      <h2> from <a href="http://www.zachstronaut.com">zachstronaut.com</a></h2>
+
+	      <br/>
+
+	      <h2> Duff Beer Roll </h2>
+	      <h2> from <a href="http://www.cssplay.co.uk">cssplay.co.uk</a></h2>
+
+	      <br/>
+
+	      <h2> jquery+css3 Slick Menu </h2>
+	      <h2> from <a href="http://marcofolio.net">marcofolio.net</a></h2>
+
+	      <br/>
+
+	      <h2> CSS3 Clock </h2>
+	      <h2> from <a href="http://css-tricks.com">css-tricks.com</a></h2>
+
+	      <br/>
+
+	      <h2> CSS3 Dialogs "Windows Aero" Style </h2>
+	      <h2> from <a href="http://polarnerd.com">polarnerd.com</a></h2>
+
+	      <br/>
+
+	      <h2> Video Explosion and 3D Rotation </h2>
+	      <h2> from <a href="http://www.craftymind.com">craftymind.com</a></h2>
+
+	      <br/>
+
+	      <h2> Video Ambient Light Effect </h2>
+	      <h2> from <a href="http://chikuyonok.ru">chikuyonok.ru</a></h2>
+
+	      <br/>
+
+	      <h2> Video Washing Machine </h2>
+	      <h2> from <a href="http://paulrouget.com/">Paul Rouget</a></h2>
+
+	      <br/>
+
+	      <h2> Video Puzzle </h2>
+	      <h2> from <a href="http://fczbrhackday.appspot.com">fczbrhackday.appspot.com</a></h2>
+
+	      <br/>
+
+	      <h2> Audio Player Widget </h2>
+	      <h2> from <a href="http://moztw.org">moztw.org</a></h2>
+
+	      <br/>
+
+	      <h2> Custom Audio Player </h2>
+	      <h2> from <a href="http://ircam.fr">irfcam.fr</a></h2>
+
+	      <br/>
+
+	      <h2> Audio API Presentation </h2>
+	      <h2> from <a href="http://vocamus.net/dave/?page_id=2">David Humphrey</a></h2>
+
+	      <br/>
+	      <h1>
+		<a href="http://twitter.com/#!/petterihiisila/status/22602545109">
+		  @petterihiisila OH: "If you're not paying for it, you're not the customer; you are the product being sold."
+		</a>
+	      </h1>
+	    </center>	    
+	  </marquee>
+	  <script>
+	    $(function() { $("#marquee").trigger("pause"); });
+	  </script>
+      </div>
+    </div>
+  </div>
+</html>
+
